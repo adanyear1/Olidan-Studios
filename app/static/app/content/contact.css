@@ -1,0 +1,119 @@
+:root {
+    --txtcolor: #89fc00;
+}
+
+section .row {
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+i {
+    font-size: 24px;
+    margin-right: 24px;
+    margin-left: auto;
+}
+
+li i,
+li span {
+    color: #fbfffe;
+}
+
+li p {
+    color: var(--txtcolor);
+    margin-top: 14px;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border: none;
+}
+
+section span {
+    font-size: 24px;
+}
+
+#phone {
+    color: var(--txtcolor);
+}
+
+.contact-info {
+    margin-bottom: 0px;
+}
+
+#contact-text p {
+    font-size: 2rem;
+}
+
+/*contact form*/
+.form-control {
+    border-radius: 0px;
+}
+
+label {
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.75px;
+    font-size: 1.5rem;
+}
+
+footer {
+    margin-top: 0px;
+}
+
+@media (max-width: 425px) {
+    #contact-text {
+        max-height: 685px;
+    }
+
+        #contact-text p {
+            font-size: 1.5rem;
+        }
+
+    .contact-info {
+        max-height: 1500px;
+    }
+}
+
+@media (max-width: 767px) {
+    #contact-text {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("../../../static/app/images/studio.jpg");
+        background-size: 100% 100%;
+        width: 100%;
+    }
+
+    .list-group {
+        margin-top: 20px;
+    }
+
+    li p {
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    #email,
+    #phone{
+        text-align: end;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #contact-text p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 768px) {
+    section {
+        background: url("../../../static/app/images/studio.jpg");
+        background-size: 50% 100%;
+    }
+
+    #contact-text {
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+    }
+
+    #contact-form {
+        background-color: #fbfffe;
+    }
+}

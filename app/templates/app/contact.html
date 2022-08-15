@@ -1,0 +1,72 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="../../static/app/content/contact.css" />
+
+
+<section class="contact-info">
+    <div class="row">
+        <div class="col-md-6 d-flex justify-content-center align-items-center flex-row" id="contact-text">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <i class="bi bi-geo-alt"></i><span>Location</span>
+                    <p>Austin, TX</p>
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-envelope"></i><span>Email</span>
+                    <p id="email">olidanstudios@gmail.com</p>
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-person"></i><span id="name">Oliver Cueva</span>
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-phone"></i><span id="phone">(512) 354-9084</span>
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-person"></i><span id="name">Adan Garcia</span>
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-phone"></i><span id="phone">(512) 968-1855</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6" id="contact-form">
+             <h2 class="text-center"><strong>Send Us A Message</strong></h2>
+              <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="container">
+                        <div class="form-group">
+                            <label for="name"><strong>Name</strong></label>
+                            <input type="text" class="form-control" id="name" placeholder="First & Last Name" name="name">
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="form-group">
+                            <label for="email"><strong>Email Address</strong></label>
+                            <input type="email" class="form-control" id="email" placeholder="emailaddress@example.com" name="email">
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="form-group">
+                            <label for="phone"><strong>Phone Number</strong></label>
+                            <input type="text" class="form-control" id="phone" placeholder="Phone Number" name="phone">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="message"><strong>Message</strong></label>
+                        <textarea class="form-control" id="message" rows="5" name="message"></textarea>
+                    </div>
+                    <div class="container">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-danger mb-2">Submit</button>
+                        </div>
+                    </div>
+              </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

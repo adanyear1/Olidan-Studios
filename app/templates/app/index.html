@@ -1,0 +1,67 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="../../static/app/content/home.css" />
+
+<section class="banner">
+    <div class="container">
+        <h2 class="banner-text"><strong>This Is the Beginning of a New Chapter In the Music Industry in Austin, TX</strong></h2>
+    </div>
+</section>
+
+<div class="container body-content">
+    <!--<section class="future">
+        <h3>Coming Soon</h3>
+    </section>-->
+
+    <section class="media">
+        <h3>Media</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/njIU6rsE-rU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/kFoyZOmz2DQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/1WDYzNh_YeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/JE0Bgf5vLlE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="guests">
+        <h3>Featured Guests</h3>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../../static/app/images/HC_Banner.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../static/app/images/mo_banner.png" class="d-block w-100" alt="...">
+                </div>
+                <!--<div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                </div>-->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

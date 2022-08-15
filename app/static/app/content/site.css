@@ -1,0 +1,185 @@
+body {
+    padding-top: 80px;
+    padding-bottom: 0px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+:root {
+    --footerbkg: black;
+    --footernavtxtcol: white;
+    --roprabkg: darkgray;
+}
+
+/*Navbar Settings*/
+/*.navbar{
+    height: 80px;
+}*/
+
+nav li i{
+    font-size: 36px;
+    margin: 8px;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 0;
+}
+
+/*Footer*/
+footer {
+    color: var(--footernavtxtcol);
+    background-color: var(--footerbkg);
+    height: 210px;
+}
+
+#logo{
+    height: 130px;
+}
+
+.footer-logo{
+    min-height: 75%;
+    width: 100%;
+}
+
+.icons {
+    color: white;
+    font-size: 36px;
+    padding: 12px;
+    height: 130px;
+}
+
+.icons a{
+    color: white;
+}
+
+.p-footer{
+    font-size: 32px;
+    color: white;
+    height: 130px;
+}
+
+
+footer .list-group-item {
+    background-color: var(--footerbkg);
+    color: var(--footernavtxtcol);
+    border: none;
+}
+
+footer i{
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.site-map{
+    height: 60px;
+    background-color: black;
+}
+
+.site-map ul{
+    height: 60px;
+    color: white;
+}
+
+.site-map ul a:active, .site-map ul a:hover{
+    background: none;
+    outline: none;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: none;
+}
+
+.site-map ul a{
+    font-size: 2.5rem;
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#ropra {
+    height: 20px;
+    background-color: var(--roprabkg);
+}
+
+#ropra a {
+    color: var(--footernavtxtcol);
+    text-decoration: none;
+}
+
+@media (max-width: 767px){
+    .p-footer {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 40px;
+    }
+    .icons{
+        height: 80px;
+    }
+}
+
+@media (min-width: 768px){
+    .p-footer {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 991px){
+    footer{
+        height: auto;
+    }
+}
+
+@media (min-width: 992px){
+    @media (min-width: 768px) {
+        .p-footer {
+            align-items: center;
+            display: flex;
+            justify-content: end;
+        }
+    }
+    #p-footer{
+        padding-right: 50%;
+    }
+}

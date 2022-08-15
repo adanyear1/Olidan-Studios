@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/d98f184c90.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-fixed-top navbar-expand-md bg-light">
+        <div class="container-fluid justify-content-between">
+            <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
+                Navbar
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'media' %}">Episodes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
+                <ul class="nav d-flex align-items-center justify-content-end">
+                   <li class="nav-item">
+                        <a href="https://www.facebook.com/Olidan-Studios-111690618196960"><i class="fa-brands fa-facebook" style="color: #4267B2;"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.instagram.com/olidanstudios/"><i class="fa-brands fa-instagram" style="font-size:28px;color:#fff; padding:4px; border-radius: 8px;background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);  "></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.tiktok.com/@olidanstudios"><i class="fa-brands fa-tiktok" style="color: #111111;filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.youtube.com/channel/UCdeSlTo-4E3IHLSCB2RHSPQ"><i class="fa-brands fa-youtube" style="color:#FF0000;"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--
+    <nav class="navbar navbar-expand-md navbar-fixed-top navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="nav-button" onclick="myfunction()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav d-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Media</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <ul class="nav d-flex align-items-center justify-content-end">
+                   <li class="nav-item">
+                        <i class="fa-brands fa-facebook" style="color: #4267B2;"></i>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa-brands fa-instagram" style="font-size:28px;color:#fff; padding:4px; border-radius: 8px;background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);  "></i>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa-brands fa-tiktok" style="color: #111111;filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);"></i>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa-brands fa-youtube" style="color:#FF0000;"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>-->
+    <script type="text/javascript" src="../../static/app/scripts/app.js"></script>
+
+    <!--<div class="container body-content">-->
+{% block content %}{% endblock %}
+        <hr/>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4" id="logo">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="index.html"><img src="../../static/app/images/logo1.jpg" class="footer-logo"/></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="footer-text">
+                        <p class="p-footer">
+                            Follow Us!
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="icons d-flex align-items-center justify-content-end">
+                            <a href="https://www.facebook.com/Olidan-Studios-111690618196960"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/olidanstudios/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@olidanstudios"><i class="fa-brands fa-tiktok" style="filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);"></i></a>
+                            <a href="https://www.youtube.com/channel/UCdeSlTo-4E3IHLSCB2RHSPQ"><i class="fa-brands fa-youtube"></i></a>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-map">
+                <div class="container">
+                    <ul class="nav d-flex align-items-center justify-content-start">
+                       <li class="nav-item">
+                            <a href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'about' %}">About</a>
+                        <li class="nav-item">
+                            <a href="{% url 'media' %}">Episodes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'contact' %}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ropra text-center" id="ropra">
+                <a href="http://ropra.net">&copy; Designed by ROPRA</a>
+            </div> 
+        </footer>
+        
+    <!--</div>-->
+
+    <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
+    <script src="{% static 'app/scripts/respond.js' %}"></script>
+{% block scripts %}{% endblock %}
+
+</body>
+</html>
